@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://u7qm6ao1iwgy"]
+
+[ext_resource type="Script" path="res://scene_directory/player.gd" id="1_8gtvn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_do5xt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ake30"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_8gtvn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_do5xt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_ake30")
