@@ -1,1 +1,5 @@
 res://test_level.tscn
+res://main_menu.tscn
+res://start_button.gd
+res://scene_directory/test_level.tscn
+res://scene_directory/main_menu.tscn

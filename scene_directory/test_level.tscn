@@ -27,10 +27,8 @@ transform = Transform3D(0.138556, 0, 0, 0, 0.0626684, 0, 0, 0, 0.151695, 0, 0.16
 mesh = SubResource("CylinderMesh_st542")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="MeshInstance3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_3cxvr")
 
 [node name="Light" type="OmniLight3D" parent="."]
