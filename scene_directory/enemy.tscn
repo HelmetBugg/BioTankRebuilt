@@ -1,16 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctq86ew83pxo0"]
+[gd_scene load_steps=5 format=3 uid="uid://ctq86ew83pxo0"]
 
-[ext_resource type="Script" path="res://Node3D.gd" id="1_e2h8i"]
+[ext_resource type="Script" path="res://scene_directory/enemy.gd" id="1_vgden"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_25jxr"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_gaywv"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_7utau"]
+
 [node name="enemy" type="CharacterBody3D"]
-script = ExtResource("1_e2h8i")
+script = ExtResource("1_vgden")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_25jxr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_gaywv")
+
+[node name="SightArea" type="Area3D" parent="."]
+
+[node name="SightCollision" type="CollisionShape3D" parent="SightArea"]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+shape = SubResource("SphereShape3D_7utau")
+
+[connection signal="area_entered" from="SightArea" to="." method="_on_sight_area_area_entered"]

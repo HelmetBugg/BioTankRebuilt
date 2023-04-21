@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://u7qm6ao1iwgy"]
+[gd_scene load_steps=7 format=3 uid="uid://u7qm6ao1iwgy"]
 
 [ext_resource type="Script" path="res://scene_directory/player.gd" id="1_8gtvn"]
 [ext_resource type="ArrayMesh" uid="uid://lxjpy81wn1ql" path="res://res/model/biotank_base.obj" id="2_glcav"]
@@ -9,6 +9,8 @@ size = Vector3(3.1874, 0.557503, 0.487472)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3wb63"]
 size = Vector3(1.12587, 0.746438, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_brjd1"]
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_8gtvn")
@@ -34,3 +36,9 @@ shape = SubResource("BoxShape3D_lydtx")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(2.96783, 0, 0, 0, 1, 0, 0, 0, 2.36991, 0.182982, 0.169928, 0)
 shape = SubResource("BoxShape3D_3wb63")
+
+[node name="PlayerVisibilityArea" type="Area3D" parent="."]
+
+[node name="PlayerVisibiltyCollision" type="CollisionShape3D" parent="PlayerVisibilityArea"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+shape = SubResource("SphereShape3D_brjd1")

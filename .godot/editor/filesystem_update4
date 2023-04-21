@@ -1,5 +1,5 @@
+res://scene_directory/enemy.tscn
+res://scene_directory/enemy.gd
 res://scene_directory/test_level.tscn
 res://scene_directory/main_menu.tscn
 res://scene_directory/player.tscn
-res://scene_directory/player.gd
-res://scene_directory/enemy.tscn

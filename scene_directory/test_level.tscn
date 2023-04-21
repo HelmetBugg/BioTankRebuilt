@@ -10,7 +10,7 @@
 [node name="World" type="Node3D"]
 
 [node name="Floor" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.0230877, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(4, 0, 0, 0, 0.092, 0, 0, 0, 4, 0, 0, 0)
 mesh = SubResource("BoxMesh_orsro")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
