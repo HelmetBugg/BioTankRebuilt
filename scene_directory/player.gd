@@ -7,14 +7,13 @@ const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _physics_process(delta):
-	# Add the gravity.
+	handle_input(delta)
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-	handle_input(delta)
 	move_and_slide()
 
 func handle_input(delta):
-	velocity -= Vector3(0, 0, 0)
+	velocity = Vector3(0, 0, 0)
 	if Input.is_action_pressed("Forward"):
 		velocity = -transform.basis.z * MOVEMENT_SPEED
 	elif Input.is_action_pressed("Back"):
