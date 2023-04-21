@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dwncr2jm56fnf"
+path="res://.godot/imported/biotank_top.obj-001e5218c33a10b84d4d8c0f2b8341da.mesh"
+
+[deps]
+
+files=["res://.godot/imported/biotank_top.obj-001e5218c33a10b84d4d8c0f2b8341da.mesh"]
+
+source_file="res://res/model/biotank_top.obj"
+dest_files=["res://.godot/imported/biotank_top.obj-001e5218c33a10b84d4d8c0f2b8341da.mesh", "res://.godot/imported/biotank_top.obj-001e5218c33a10b84d4d8c0f2b8341da.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

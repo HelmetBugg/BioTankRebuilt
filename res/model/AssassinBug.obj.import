@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cx6ca00k1x4au"
+path="res://.godot/imported/AssassinBug.obj-0891decb9acf3697fc6e90758ed7d114.mesh"
+
+[deps]
+
+files=["res://.godot/imported/AssassinBug.obj-0891decb9acf3697fc6e90758ed7d114.mesh"]
+
+source_file="res://res/model/AssassinBug.obj"
+dest_files=["res://.godot/imported/AssassinBug.obj-0891decb9acf3697fc6e90758ed7d114.mesh", "res://.godot/imported/AssassinBug.obj-0891decb9acf3697fc6e90758ed7d114.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,16 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://u7qm6ao1iwgy"]
+[gd_scene load_steps=6 format=3 uid="uid://u7qm6ao1iwgy"]
 
 [ext_resource type="Script" path="res://scene_directory/player.gd" id="1_8gtvn"]
+[ext_resource type="ArrayMesh" uid="uid://lxjpy81wn1ql" path="res://res/model/biotank_base.obj" id="2_glcav"]
+[ext_resource type="ArrayMesh" uid="uid://dwncr2jm56fnf" path="res://res/model/biotank_top.obj" id="3_hrh5a"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_do5xt"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_lydtx"]
+size = Vector3(3.1874, 0.557503, 0.487472)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ake30"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_3wb63"]
+size = Vector3(1.12587, 0.746438, 1)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_8gtvn")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_do5xt")
+[node name="Base" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0981878, 0, 0)
+mesh = ExtResource("2_glcav")
+
+[node name="top" type="MeshInstance3D" parent="Base"]
+mesh = ExtResource("3_hrh5a")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9463, 0.32329, 0, -0.32329, 0.9463, 0, 2.97862, 5.02947)
+
+[node name="Collisions2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.773807, -0.633421, 0, 0.633421, -0.773807, 0.14551, 0.100507, 1.20987)
+shape = SubResource("BoxShape3D_lydtx")
+
+[node name="Collisions3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.752622, 0.658453, 0, -0.658453, 0.752622, 0.154738, 0.0920929, -1.18061)
+shape = SubResource("BoxShape3D_lydtx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_ake30")
+transform = Transform3D(2.96783, 0, 0, 0, 1, 0, 0, 0, 2.36991, 0.182982, 0.169928, 0)
+shape = SubResource("BoxShape3D_3wb63")
