@@ -22,7 +22,7 @@ shape = SubResource("BoxShape3D_ks6e1")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.539598, 0.360977, 0)
 
 [node name="Player" parent="." instance=ExtResource("1_rwxxy")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.0689556, 0)
+transform = Transform3D(0.0336106, 0, -0.0370179, 0, 0.05, 0, 0.0370179, 0, 0.0336106, -0.443204, 0.0689556, 0.356041)
 
 [node name="enemy" parent="." instance=ExtResource("2_ui3k1")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.339217, 0.220814, 0.202553)
