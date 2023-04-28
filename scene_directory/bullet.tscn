@@ -1,10 +1,131 @@
-[gd_scene load_steps=4 format=3 uid="uid://36wlq1yarmvi"]
+[gd_scene load_steps=22 format=3 uid="uid://36wlq1yarmvi"]
 
 [ext_resource type="Script" path="res://src/Bullet.gd" id="1_q43vx"]
+[ext_resource type="Texture2D" uid="uid://dle4llhbd0jww" path="res://res/sprites/exp2_0.png" id="2_icn0j"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_pv4jx"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_syawh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpelv"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axr3f"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckc1m"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4mt8"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbwhv"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8p88g"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vc2qb"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pabmp"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3xyi"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fbc5"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nsot"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slbv4"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_008mg"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y73qm"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bflf0"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_veufw"]
+atlas = ExtResource("2_icn0j")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_so6yq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpelv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axr3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckc1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4mt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbwhv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8p88g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vc2qb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pabmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3xyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fbc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nsot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slbv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_008mg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y73qm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bflf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_veufw")
+}],
+"loop": false,
+"name": &"splode",
+"speed": 10.0
+}]
 
 [node name="Bullet" type="Area3D"]
 script = ExtResource("1_q43vx")
@@ -15,4 +136,13 @@ mesh = SubResource("SphereMesh_pv4jx")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_syawh")
 
+[node name="splosion" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(6.27116, 0, 0, 0, 6.37029, 0, 0, 0, 1, 0, 0, 0)
+visible = false
+sprite_frames = SubResource("SpriteFrames_so6yq")
+animation = &"splode"
+frame = 15
+frame_progress = 1.0
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="splosion" to="." method="_on_splosion_animation_finished"]

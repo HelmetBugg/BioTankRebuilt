@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0bypp7blurnc"]
 
-[ext_resource type="PackedScene" uid="uid://u7qm6ao1iwgy" path="res://scene_directory/player.tscn" id="1_rwxxy"]
-[ext_resource type="PackedScene" uid="uid://ctq86ew83pxo0" path="res://scene_directory/enemy.tscn" id="2_ui3k1"]
+[ext_resource type="PackedScene" uid="uid://b5xlgyrm4k87" path="res://scene_directory/player.tscn" id="1_rwxxy"]
+[ext_resource type="PackedScene" uid="uid://cpxb0bw5e4sji" path="res://scene_directory/enemy.tscn" id="2_ui3k1"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_orsro"]
 
