@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://u7qm6ao1iwgy"]
+[gd_scene load_steps=7 format=3 uid="uid://b5xlgyrm4k87"]
 
-[ext_resource type="Script" path="res://scene_directory/player.gd" id="1_8gtvn"]
+[ext_resource type="Script" path="res://src/player.gd" id="1_ui8k6"]
 [ext_resource type="ArrayMesh" uid="uid://lxjpy81wn1ql" path="res://res/model/biotank_base.obj" id="2_glcav"]
 [ext_resource type="ArrayMesh" uid="uid://dwncr2jm56fnf" path="res://res/model/biotank_top.obj" id="3_hrh5a"]
 
@@ -13,7 +13,7 @@ size = Vector3(1.12587, 0.746438, 1)
 [sub_resource type="SphereShape3D" id="SphereShape3D_brjd1"]
 
 [node name="Player" type="CharacterBody3D"]
-script = ExtResource("1_8gtvn")
+script = ExtResource("1_ui8k6")
 
 [node name="Base" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0981878, 0, 0)

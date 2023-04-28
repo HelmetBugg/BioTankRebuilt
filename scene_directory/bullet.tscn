@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://imr2gsjmwb5f"]
+[gd_scene load_steps=4 format=3 uid="uid://36wlq1yarmvi"]
 
-[ext_resource type="Script" path="res://Bullet.gd" id="1_togki"]
+[ext_resource type="Script" path="res://src/Bullet.gd" id="1_q43vx"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_pv4jx"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_syawh"]
 
 [node name="Bullet" type="Area3D"]
-script = ExtResource("1_togki")
+script = ExtResource("1_q43vx")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_pv4jx")
