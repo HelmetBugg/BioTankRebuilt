@@ -2,6 +2,7 @@ extends CharacterBody3D
 const MOVEMENT_SPEED = 3.0
 const ROTATION_SPEED = 1.0
 const JUMP_VELOCITY = 4.5
+var bullet = preload("res://scene_directory/bullet.tscn")
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -22,4 +23,9 @@ func handle_input(delta):
 		rotate_y(-ROTATION_SPEED * delta)
 	elif Input.is_action_pressed("Left"):
 		rotate_y(ROTATION_SPEED * delta)
+	if Input.is_action_just_pressed("Shoot"):
+		var b = bullet.instantiate()
+		owner.add_child(b)
+		b.transform = $Base/top/Barrel.global_transform
+		b.velocity = -b.transform.basis.z * b.speed
 
