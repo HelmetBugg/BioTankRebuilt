@@ -12,7 +12,12 @@ size = Vector3(1.12587, 0.746438, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_brjd1"]
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="RigidBody3D"]
+mass = 155.05
+max_contacts_reported = 4
+contact_monitor = true
+linear_damp = 1.011
+angular_damp = 17.167
 script = ExtResource("1_ui8k6")
 
 [node name="Base" type="MeshInstance3D" parent="."]
