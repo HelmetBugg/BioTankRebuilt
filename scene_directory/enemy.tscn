@@ -2,17 +2,19 @@
 
 [ext_resource type="Script" path="res://src/enemy.gd" id="1_fh2wu"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_25jxr"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hbt4c"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_gaywv"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7utau"]
 
 [node name="enemy" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_fh2wu")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_25jxr")
+shape = SubResource("CapsuleShape3D_hbt4c")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_gaywv")
